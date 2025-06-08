@@ -1,7 +1,6 @@
 const express = require('express');
 const app = express();
-const port = process.env.PORT || 8081;
-
+const port = process.env.PORT || 8080; // fallback to 8080 for local testing
 
 // Importing hardcoded travel data
 const destinations = require('./data/destinations');
@@ -16,6 +15,7 @@ app.get('/api/destinations', (req, res) => {
 
 app.get('/', (req, res) => res.send('Hello from Elastic Beanstalk!'));
 
+// ✅ Only listen ONCE
 app.listen(port, () => {
-  app.listen(port, () => console.log(`Listening on port ${port}`));
+  console.log(`Listening on port ${port}`);
 });
