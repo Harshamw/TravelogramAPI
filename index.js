@@ -13,7 +13,7 @@ app.get('/api/destinations', (req, res) => {
   });
 });
 
-app.get('/', (req, res) => res.send('Hello from Elastic Beanstalk!!V!'));
+app.get('/', (req, res) => res.send('Hello from Elastic Travelogram!'));
 
 // Only listen ONCE
 app.listen(port, () => {
