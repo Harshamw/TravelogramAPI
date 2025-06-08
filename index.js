@@ -15,7 +15,7 @@ app.get('/api/destinations', (req, res) => {
 
 app.get('/', (req, res) => res.send('Hello from Elastic Beanstalk!'));
 
-// ✅ Only listen ONCE
+// Only listen ONCE
 app.listen(port, () => {
   console.log(`Listening on port ${port}`);
 });
