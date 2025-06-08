@@ -1,6 +1,7 @@
 const express = require('express');
 const app = express();
-const PORT = 8081;
+const port = process.env.PORT || 8080;
+
 
 // Importing hardcoded travel data
 const destinations = require('./data/destinations');
@@ -13,6 +14,8 @@ app.get('/api/destinations', (req, res) => {
   });
 });
 
-app.listen(PORT, () => {
-  console.log(`🌍 Travelogram API is running on http://localhost:${PORT}`);
+app.get('/', (req, res) => res.send('Hello from Elastic Beanstalk!'));
+
+app.listen(port, () => {
+  app.listen(port, () => console.log(`Listening on port ${port}`));
 });
